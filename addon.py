@@ -16,10 +16,14 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 import xbmc
+import sys
 
 
 def main():
-    xbmc.executebuiltin("RunScript(script.maps.browser,location=geocode,lat=%s,lon=%s)" % (xbmc.getInfoLabel("ListItem.PictureGPSLat"), xbmc.getInfoLabel("ListItem.PictureGPSLon")))
+    info = sys.listitem.getPictureInfoTag()
+    lat = info.getGPSLatitude()
+    lon = info.getGPSLongitude()
+    xbmc.executebuiltin("RunScript(script.maps.browser,location=geocode,lat=%s,lon=%s)" % (lat, lon))
 
 if __name__ == '__main__':
     main()
