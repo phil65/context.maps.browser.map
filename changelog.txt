@@ -1,2 +1,6 @@
 v2.0.0
-Initial Release.
+- first Krypton release
+- get GPS info from PictureInfoTag
+
+v1.0.0
+- Initial Release.
