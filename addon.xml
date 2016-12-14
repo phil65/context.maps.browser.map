@@ -8,7 +8,7 @@
     <menu id="kodi.core.main">
       <item library="addon.py">
         <label>32000</label>
-        <visible>!IsEmpty(ListItem.PictureGPSLon)</visible>
+        <visible>!String.IsEmpty(ListItem.PictureGPSLon)</visible>
       </item>
     </menu>
   </extension>
