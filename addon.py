@@ -18,12 +18,7 @@
 import xbmc
 import sys
 
-
-def main():
-    info = sys.listitem.getPictureInfoTag()
-    lat = info.getGPSLatitude()
-    lon = info.getGPSLongitude()
-    xbmc.executebuiltin("RunScript(script.maps.browser,location=geocode,lat=%s,lon=%s)" % (lat, lon))
-
-if __name__ == '__main__':
-    main()
+info = sys.listitem.getPictureInfoTag()
+lat = info.getInfo("latitude")
+lon = info.getInfo("longitude")
+xbmc.executebuiltin("RunScript(script.maps.browser,location=geocode,lat=%s,lon=%s)" % (lat, lon))
